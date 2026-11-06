@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de videos YouTube Fake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="logo-title" id="btn-inicio">Videos Fake</h1>
+        <nav class="categories-nav" id="categories-nav" aria-label="Categorías"></nav>
+    </header>
+
+    <main class="main-layout">
+        <section id="vista-galeria">
+            <div class="container"></div>
+        </section>
+
+        <section id="vista-reproductor" class="player-grid hidden">
+            <article class="player-section">
+                <button type="button" class="btn-back" id="btn-volver">← Volver al catálogo</button>
+                <video id="reproductor-principal" class="main-video-element" controls></video>
+
+                <div class="video-details">
+                    <span id="detalle-categoria" class="badge-cat"></span>
+                    <h2 id="detalle-titulo"></h2>
+                </div>
+
+                <section class="comments-box" aria-label="Comentarios">
+                    <h3>Comentarios</h3>
+                    <form id="form-comentario" class="comment-form">
+                        <input type="text" id="input-autor" placeholder="Tu nombre" required>
+                        <textarea id="input-contenido" rows="2" placeholder="Escribe un comentario..." required></textarea>
+                        <button type="submit" class="btn-submit">Publicar comentario</button>
+                    </form>
+                    <ul id="lista-comentarios" class="comments-list"></ul>
+                </section>
+            </article>
+
+            <aside class="recommendations-aside">
+                <h3>Recomendaciones (Categoría actual)</h3>
+                <div id="contenedor-recomendaciones" class="recommendations-list"></div>
+            </aside>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
